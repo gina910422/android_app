@@ -1,0 +1,191 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/shippingbck"
+    tools:context=".MyActivity">
+
+
+
+    <!-- VIEWGROUP CONTAINER FOR SHIPPING OUTPUT  -->
+    <RelativeLayout
+        android:id="@+id/layout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/paper">
+
+        <TextView
+            android:id="@+id/textView_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="50dp"
+            android:paddingLeft="@dimen/output_margin_buffer"
+            android:text="@string/height"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/editText_height"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_height"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="24dp"
+            android:layout_toEndOf="@+id/textView_height"
+            android:ems="5"
+            android:gravity="center_vertical|center_horizontal"
+            android:hint="@string/zero0"
+            android:inputType="numberDecimal"
+            android:paddingRight="@dimen/output_margin_buffer"
+            android:selectAllOnFocus="true"
+            android:textAppearance="?android:attr/textAppearanceMedium">
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/textView_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_height"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="@dimen/output_margin_buffer"
+            android:text="@string/weight"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/editText_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_weight"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@+id/textView_weight"
+            android:ems="5"
+            android:gravity="center_vertical|center_horizontal"
+            android:hint="@string/zero1"
+            android:inputType="numberDecimal"
+            android:paddingRight="@dimen/output_margin_buffer"
+            android:selectAllOnFocus="true"
+            android:textAppearance="?android:attr/textAppearanceMedium">
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/textView_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_weight"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="@dimen/output_margin_buffer"
+            android:text="@string/age"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/editText_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_age"
+            android:layout_alignTop="@+id/textView_age"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="-1dp"
+            android:layout_toEndOf="@+id/textView_age"
+            android:ems="5"
+            android:gravity="center_vertical|center_horizontal"
+            android:hint="@string/zero2"
+            android:inputType="number"
+            android:paddingRight="@dimen/output_margin_buffer"
+            android:selectAllOnFocus="true"
+            android:textAppearance="?android:attr/textAppearanceMedium">
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/editText_height"
+            android:layout_alignTop="@+id/editText_height"
+            android:layout_marginLeft="64dp"
+            android:layout_marginTop="24dp"
+            android:layout_toRightOf="@id/editText_height"
+            android:onClick="buttonOnClick1"
+            android:text="@string/sex" />
+
+        <!-- TEXTVIEWS FOR BASE COST LABEL AND COMPUTATION  -->
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/comp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout1"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="400dp"
+        android:onClick="buttonOnClick2"
+        android:text="comp" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/comp"
+        android:layout_alignRight="@id/comp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="100dp"
+        android:onClick="buttonOnClick3"
+        android:text="reset" />
+
+    <RelativeLayout
+        android:id="@+id/layout2"
+        android:layout_width="wrap_content"
+        android:layout_height="147dp"
+        android:layout_below="@+id/layout1"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/paper">
+
+        <TextView
+            android:id="@+id/bmr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="27dp"
+            android:paddingLeft="@dimen/output_margin_buffer"
+            android:text="@string/bmr"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/ans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/bmr"
+            android:layout_alignTop="@+id/bmr"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@+id/bmr"
+            android:paddingRight="@dimen/output_margin_buffer"
+            android:selectAllOnFocus="true"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </RelativeLayout>
+
+
+</RelativeLayout>
