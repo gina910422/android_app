@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Tap Button Counter</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="inc_btn">Inc</string>
+    <string name="dec_btn">Dec</string>
+    <string name="comp_btn">Comp</string>
+    <string name="reset_btn">Reset</string>
+
+    <string name="num">0</string>
+    <string name="zero">0</string>
+    <string name="one">1</string>
+    <string name="m_one">-1</string>
+
+</resources>
